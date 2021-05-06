@@ -1,0 +1,21 @@
+
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+
+import ItemCard from ".";
+
+import image from "./shoe.jpg";
+
+<Meta title="Components/ItemCard" />
+
+## ItemCard
+
+TODO: add component description
+
+<Preview>
+  <Story name="Default"  args={{
+      src: image,
+      isFavorite: false,
+  }}>
+    {(args) => <ItemCard {...args}/>}
+  </Story>
+</Preview>
