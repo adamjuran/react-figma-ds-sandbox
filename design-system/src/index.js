@@ -5,7 +5,7 @@
  */
 
 export { default as GlobalStyle } from "./global.js";
-export { colors, typography, spacing } from "./tokens";
+export { colors, typography } from "./tokens";
 
 
 export { default as Button } from "./components/Button";
@@ -13,3 +13,5 @@ export { default as Carousel } from "./components/Carousel";
 export { default as Icon } from "./components/Icon";
 export { default as Select } from "./components/Select";
 export { default as SummaryTable } from "./components/SummaryTable";
+export { default as Topbar } from "./components/Topbar";
+export { default as topbar } from "./components/topbar";
