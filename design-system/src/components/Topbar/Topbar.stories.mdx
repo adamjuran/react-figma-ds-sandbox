@@ -3,6 +3,10 @@ import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
 
 import Topbar from ".";
 
+import { Avatar, Button, Icon } from '../..';
+
+export const avatarSrc = "/userImageSample.jpg";
+
 <Meta title="Components/Topbar" />
 
 ## Topbar
@@ -11,6 +15,9 @@ TODO: add component description
 
 <Preview>
   <Story name="Default">
-    <Topbar/>
+    <Topbar
+      firstAction={<Avatar src={avatarSrc} />}
+      lastAction={<Button isOutline><Icon name ="menu" /></Button>}
+    />
   </Story>
 </Preview>

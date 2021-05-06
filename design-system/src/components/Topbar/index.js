@@ -1,18 +1,34 @@
-
 import React from "react";
 import styled from "styled-components";
+import { spacing } from "../../tokens";
 
+console.log(spacing)
 /* Topbar
  *
- * TODO: add component description
+ * A wrapper component for the app Topbar, with slots for two actions and a title.
  */
-const Topbar = (props) => {
-  return <StyledTopbar><div>Item 1</div><div>Item 2</div></StyledTopbar>;
+const Topbar = ({ firstAction = null, title, lastAction = null }) => {
+  return (
+  <StyledTopbar>
+    {firstAction}
+    {title && <StyledTitle><h4>{title}</h4></StyledTitle>}
+    {lastAction}
+    </StyledTopbar>
+    );
 };
 
 export const StyledTopbar = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center`;
+  margin-bottom: ${spacing.spacing3XlBottom};
+`;
+
+export const StyledTitle = styled.div`
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  margin-left: ${spacing.spacing2XlLeft};
+  margin-right: ${spacing.spacing2XlRight};
+`;
 
 export default Topbar;
