@@ -1,6 +1,7 @@
 import { string } from "prop-types";
 import React from "react";
 import styled from "styled-components";
+import { radius } from "../../tokens";
 
 /* Avatar
  *
@@ -11,7 +12,7 @@ const Avatar = ({ src, ...props }) => <StyledAvatar src={src} />;
 const StyledAvatar = styled.img`
   width: 48px;
   height: 48px;
-  border-radius: 16px;
+  border-radius: ${radius.radii16Radius};
 `;
 
 Avatar.propTypes = {

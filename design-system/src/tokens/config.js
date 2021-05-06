@@ -44,6 +44,15 @@ StyleDictionary.registerFilter({
   },
 });
 
+StyleDictionary.registerFilter({
+  name: "isRadius",
+  matcher: function (prop) {
+    return (
+      prop.name.startsWith("radi")
+    );
+  },
+});
+
 /* Basic filter to separate spacing tokens. */
 StyleDictionary.registerFilter({
   name: "isSpacing",
@@ -82,6 +91,12 @@ module.exports = {
           destination: "spacing.js",
           format: "javascript/es6",
           filter: "isSpacing",
+        },
+        /* Filter and extract radius tokens*/
+        {
+          destination: "radius.js",
+          format: "javascript/es6",
+          filter: "isRadius",
         },
       ],
     },
