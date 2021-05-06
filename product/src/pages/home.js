@@ -60,12 +60,6 @@ const Styledh1 = styled.h1`
   letter-spacing: -1.6px;
 `;
 
-const StyledDiv2 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-`;
-
 const StyledDiv3 = styled.div`
   display: flex;
   justify-content: space-between;
