@@ -4,7 +4,7 @@
  */
 import React from "react";
 import styled from "styled-components";
-import { Button, Icon, colors } from "design-system";
+import { Avatar, Button, Icon, Topbar, colors } from "design-system";
 import { Link } from "react-router-dom";
 
 const data = require("../data/data.js");
@@ -13,12 +13,10 @@ const Home = () => {
   return (
     <div>
       <StyledDiv1>
-        <StyledDiv2>
-          <StyledImage1 src={data.user.avatar} />
-          <Button isOutline>
-            <Icon name="menu" />
-          </Button>
-        </StyledDiv2>
+        <Topbar
+          firstAction={<Avatar src={data.user.avatar} />}
+          lastAction={<Button isOutline><Icon name="menu" /></Button>}
+        />
         <Styledh1>Store</Styledh1>
 
         <StyledDiv3>
@@ -52,12 +50,6 @@ const Home = () => {
     </div>
   );
 };
-
-const StyledImage1 = styled.img`
-  width: 48px;
-  height: 48px;
-  border-radius: 16px;
-`;
 
 const StyledDiv1 = styled.div`
   padding: 64px 40px;
